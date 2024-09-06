@@ -1,0 +1,101 @@
+/* Header and menu items */
+
+header{
+    margin: 0;
+    padding: 1rem;
+    background-color: #404244;
+    /* height: 130px; */
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar p{
+    font-family: 'Times New Roman', Times, serif;
+    display: none;
+    align-self: flex-end;
+    color: #D3D6D8;
+    font-size: 50px;
+    padding-right: 50px;
+}
+
+.logo{
+    align-self: center;
+    width: 200px;
+    height: 133px;
+}
+
+.main{
+    background-color: #1E1F20;
+}
+
+.menu-icon{
+    padding-right: 20px;
+    font-size: 25px;
+    align-self: flex-end;
+    margin-right: 0;
+    color: white;
+}
+
+.menu-items{
+    display: flex;
+    background-color: #8C8068;
+    justify-content: space-around;
+    flex-direction: row;
+    padding:0;
+    gap: 0;
+    height: 0;
+    transition: height 0.5s linear; 
+    overflow: hidden;  
+}
+
+.menu-items.show{
+    height: 75px;
+}
+
+.menu-items-content {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 5px 0px 5px 0px;
+    margin: 0;
+}
+
+.menu-items-content a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-family: 'Golos Text';
+    font-weight:300;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+}
+
+.menu-items-content a:hover{
+    background-color: #D3D6D8;
+}
+
+
+
+@media (min-width: 700px) {
+    /* menu items */
+    .navbar p{
+        display: flex;
+    }
+    .menu-icon{
+        display: none;
+    }
+    .menu-items{
+        height: 30px;
+    }
+    .menu-items-content{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 50%;
+        align-self: center;
+    }
+}
