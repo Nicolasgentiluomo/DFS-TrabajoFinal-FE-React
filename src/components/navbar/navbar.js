@@ -1,23 +1,30 @@
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/Logo.png';
 import './navbar.css';
 
 function NavBar()
 {
+    const [menuButton, setMenuButton] = useState(false);
+
+    const handleMenuToggle = () => {
+        setMenuButton(!menuButton)
+    }
+
     return(
     <section>
         <header>
             <nav className="navbar">
                 <img src={Logo} alt="" className="logo"/>
                 <p>ARTEM FACTORY</p>
-                <div className="menu-icon">
+                <div className="menu-icon" onClick={handleMenuToggle}>
                     <i className="fa-solid fa-bars"></i>
                 </div>
             </nav>
         </header>
 
         <main className="main">
-            <section className="menu-items">
+            <section className={`menu-items ${menuButton ? 'show' : ''}`}>
                 <ul className="menu-items-content">
                     <li><Link to={"/"}>Inicio</Link></li>
                     <li><Link to={"/Products"}>Productos</Link></li>
