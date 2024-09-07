@@ -1,0 +1,47 @@
+
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #404244;
+    margin: 0;
+    width: 100%;
+    gap: 20px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content h3{
+    font-size: larger;
+    font-weight: bold;
+    padding: 10px 0;
+    margin: 0;
+    font-family: 'Golos Text';
+}
+
+.footer-content p{
+    padding: 5px 0;
+    margin: 0;
+    font-family: 'Golos Text';
+}
+.footer-content a{
+    padding: 5px 0;
+    margin: 0;
+    font-family: 'Golos Text';
+    text-decoration: none;
+    color: white;
+}
+
+.icon-link{
+    color: white;
+}
