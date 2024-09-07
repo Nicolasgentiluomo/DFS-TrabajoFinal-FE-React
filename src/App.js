@@ -6,6 +6,7 @@ import NavBar from './components/navbar/navbar.js';
 import Home from './components/home/home.js';
 import Footer from './components/footer/footer.js'
 import Products from './components/products/products.js'
+import Admin from './components/admin/admin.js'
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/Products' element={ <Products/>}/>
+        <Route path='/Admin' element={ <Admin/>}/>
+        <Route path='/notfound' element={ <Home/>}/>
       </Routes>
 
       <Footer/>

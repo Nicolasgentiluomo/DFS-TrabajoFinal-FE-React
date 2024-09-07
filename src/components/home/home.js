@@ -9,7 +9,7 @@ function Home(){
     return (
         <section className="main-section">
 
-            <a href="hola" className="boxContainer1">
+            <Link to={"/notfound"} className="boxContainer1">
                 <div className="text1">
                     <h1>Nosotros</h1>
                     <p>
@@ -19,9 +19,9 @@ function Home(){
                     <p>Hace click en la imagen para saber mas de nosotros</p>
                 </div>
                 <img href="hola" src={Trabajo} alt=""/>
-            </a>
+            </Link>
 
-            <a href="hola2" className="boxContainer2"> 
+            <Link to={"/notfound"} className="boxContainer2">
                 <div className="text2">
                     <h1>Texturas</h1>
                     <p>Realizamos diferentes tipos de texturas tanto al hierro
@@ -30,7 +30,7 @@ function Home(){
                     <p>Hace click en la imagen para ver algunas de las texturas que ofrecemos</p>
                 </div>
                 <img src={Textura} alt=""/>
-            </a>   
+            </Link>   
 
             <Link to={"/Products"} className="boxContainer1">
                 

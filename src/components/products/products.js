@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import Producto from '../../assets/Producto1.jpeg';
+import './products.css'
 
 function Products(){
     return (
-        <section>
+        <section className = "main">
             <button>Categorias</button>
             <div class="category-items">
                 <ul>
