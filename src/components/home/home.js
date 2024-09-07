@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Producto from '../../assets/Producto2.png';
 import Textura from '../../assets/Textura1.png';
 import Trabajo from '../../assets/Trabajando.png';
@@ -31,14 +32,16 @@ function Home(){
                 <img src={Textura} alt=""/>
             </a>   
 
-            <a href="./Products.html" className="boxContainer1">
-                <div className="text1">
-                    <h1>Productos</h1>
-                    <p>Queres ver algunos de los productos que tenemos a la venta?</p>
-                    <p>Hace click para poder verlos, y si te gustan, comprarlos!</p>
-                </div>
-                <img src={Producto} alt=""/>
-            </a>
+            <Link to={"/Products"} className="boxContainer1">
+                
+                    <div className="text1">
+                        <h1>Productos</h1>
+                        <p>Queres ver algunos de los productos que tenemos a la venta?</p>
+                        <p>Hace click para poder verlos, y si te gustan, comprarlos!</p>
+                    </div>
+                    <img src={Producto} alt=""/>
+                
+            </Link>
             
         </section> 
         );
