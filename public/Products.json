@@ -1,0 +1,50 @@
+[
+    {
+        "Id":1,
+        "Description":"Descripcion de lampara 1",
+        "Title":"Lampara 1",
+        "Price":100000,
+        "Category":"Lamparas",
+        "ImgId":1
+    },
+    {
+        "Id":2,
+        "Description":"Descripcionde mesa 1",
+        "Title":"Mesa 1",
+        "Price":1000,
+        "Category":"Mesas",
+        "ImgId":2
+    },
+    {
+        "Id":3,
+        "Description":"Descripcion de mesa 2",
+        "Title":"Mesa 2",
+        "Price":200000,
+        "Category":"Mesas",
+        "ImgId":3
+    },
+    {
+        "Id":4,
+        "Description":"Descripcion de mesa 3",
+        "Title":"Mesa 3",
+        "Price":300000,
+        "Category":"Mesas",
+        "ImgId":4
+    },
+    {
+        "Id":5,
+        "Description":"Descripcion de mesa 4",
+        "Title":"Mesa 4",
+        "Price":400000,
+        "Category":"Mesas",
+        "ImgId":5
+    },
+    {
+        "Id":6,
+        "Description":"Descripcion de mesa 5",
+        "Title":"Mesa 5",
+        "Price":500000,
+        "Category":"Mesas",
+        "ImgId":6
+    }
+]
