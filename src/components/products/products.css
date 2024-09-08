@@ -67,6 +67,11 @@ button{
     max-width: 300px;
     /* min-width: 200px; */
 }
+
+.productContainer.hide{
+    display:none;
+}
+
 .productContainer:hover {
     transform: translateY(-5px);
     box-shadow:6px 6px 20px rgba(0, 0, 0, 0.523);

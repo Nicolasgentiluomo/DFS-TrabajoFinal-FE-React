@@ -4,37 +4,44 @@ import './products.css'
 
 
 function Products(){
-    const [productos, setProductos] = useState([]);
+    const [products, setProducts] = useState([]);
+    const [category, setCategory] = useState('Todo');
+    const [categoryButton, setCategoryButton] = useState(false);
 
-    useEffect(() => {
-        
+    useEffect(() => {     
         fetch('./Products.json')
         .then((response) => response.json())
-        .then((data) => setProductos(data))
+        .then((data) => setProducts(data))
         .catch((error) => console.error('Error al cargar datos:', error));
     }, []);
 
-   
+   function filterByCategory(filter){
+        setCategory(filter);
+   }
+
+   function showCategories(){
+    setCategoryButton(!categoryButton);
+   }
 
     return (
         <section className = "main">
-            <button>Categorias</button>
-            <div className="category-items">
+            <button onClick={showCategories}>Categorias</button>
+            <div className={`category-items ${categoryButton ? 'show':''}`}>
                 <ul>
-                    <li className="category-item" data-category="Todo">Todo</li>
-                    <li className="category-item" data-category="Mesas">Mesas</li>
-                    <li className="category-item" data-category="Sillas">Sillas</li>
-                    <li className="category-item" data-category="Lamparas">Lamparas</li>
+                    <li className="category-item" onClick={() => {filterByCategory('Todo'); showCategories()}}>Todo</li>
+                    <li className="category-item" onClick={() => {filterByCategory('Mesas'); showCategories()}}>Mesas</li>
+                    <li className="category-item" onClick={() => {filterByCategory('Sillas'); showCategories()}}>Sillas</li>
+                    <li className="category-item" onClick={() => {filterByCategory('Lamparas'); showCategories()}}>Lamparas</li>
                 </ul>
             </div>
             <section className="products">
-                {productos.map((producto) => (
-                    <Link to={"/"} className="productContainer" data-category={producto.category} key={producto.Id}>
-                        <img src={`./img/Producto${producto.ImgId}.jpeg`} alt=''/>
+                {products.map((product) => (
+                    <Link to={"/"} className={`productContainer ${product.Category == category || category == "Todo" ? '': 'hide'}`} data-category={product.category} key={product.Id}>
+                        <img src={`./img/Producto${product.ImgId}.jpeg`} alt=''/>
                         <div className='productsText'>
-                            <h1>{producto.Title}</h1>
-                            <p>{producto.Price}</p>
-                            <p>{producto.Description}</p>
+                            <h1>{product.Title}</h1>
+                            <p>{product.Price}</p>
+                            <p>{product.Description}</p>
                         </div>
                     </Link>
                     ))}
