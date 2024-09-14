@@ -9,6 +9,7 @@ import Products from './components/products/products.js'
 import Admin from './components/admin/admin.js'
 import Login from './components/LogIn/login.js'
 import NotAuthorized from './components/notAuthorized/notAuthorized.js';
+import NotFound from './components/notFound/notFound.js';
 import React, {useState} from 'react';
 
 
@@ -24,7 +25,7 @@ function App() {
         <Route path='/LogIn' element={<Login permissionsGranted={permissionsGranted} setPermissionsGranted={setPermissionsGranted}/>}/>
         <Route path='/Products' element={ <Products/>}/>
         <Route path='/Admin' element={ <Admin/>}/>
-        <Route path='/notfound' element={ <Home/>}/>
+        <Route path='/notfound' element={ <NotFound/>}/>
         <Route path='/notAuthorized' element={ <NotAuthorized/>}/>
       </Routes>
 

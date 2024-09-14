@@ -1,10 +1,13 @@
 import './login.css'
 import React, {useState,useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 
 function LogIn({permissionsGranted,setPermissionsGranted}){
     const [credentialsInput, setCredentialsInput] = useState({userName:'' , password: ''}); //used to get the values of the form
     const [credentials, setCredentials] = useState({}); //used to get the values of the json with credentials
+    const navigate = useNavigate();
 
     useEffect(() => {     
         fetch('./adminCredentials.json')
@@ -25,6 +28,7 @@ function LogIn({permissionsGranted,setPermissionsGranted}){
         e.preventDefault();
         if (credentialsInput.userName == credentials.UserName && credentialsInput.password == credentials.Password) {
             setPermissionsGranted('success');
+            // navigate('/')
         }
         else{
             setPermissionsGranted('incorrect')

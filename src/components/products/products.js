@@ -36,7 +36,7 @@ function Products(){
             </div>
             <section className="products">
                 {products.map((product) => (
-                    <Link to={"/"} className={`productContainer ${product.Category == category || category == "Todo" ? '': 'hide'}`} data-category={product.category} key={product.Id}>
+                    <Link to={"/"} className={`productContainer ${product.Category == category || category == "Todo" ? '': 'hide'}`} key={product.Id}>
                         <img src={`./img/Producto${product.ImgId}.jpeg`} alt=''/>
                         <div className='productsText'>
                             <h1>{product.Title}</h1>
