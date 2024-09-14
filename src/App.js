@@ -7,19 +7,25 @@ import Home from './components/home/home.js';
 import Footer from './components/footer/footer.js'
 import Products from './components/products/products.js'
 import Admin from './components/admin/admin.js'
+import Login from './components/LogIn/login.js'
+import NotAuthorized from './components/notAuthorized/notAuthorized.js';
+import React, {useState} from 'react';
 
 
 function App() {
+  const [permissionsGranted, setPermissionsGranted] = useState(''); //used to store the credentials inputted by the user
   return (
     <BrowserRouter>
 
-      <NavBar/>
+      <NavBar permissinosGranted={permissionsGranted}/>
 
       <Routes>
-        <Route path='/' element={<Home/>} />
+        <Route path='/' element={<Home/>}/>
+        <Route path='/LogIn' element={<Login permissionsGranted={permissionsGranted} setPermissionsGranted={setPermissionsGranted}/>}/>
         <Route path='/Products' element={ <Products/>}/>
         <Route path='/Admin' element={ <Admin/>}/>
         <Route path='/notfound' element={ <Home/>}/>
+        <Route path='/notAuthorized' element={ <NotAuthorized/>}/>
       </Routes>
 
       <Footer/>

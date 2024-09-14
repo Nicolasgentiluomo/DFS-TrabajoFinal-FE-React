@@ -1,11 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/Logo.png';
 import './navbar.css';
 
-function NavBar()
+function NavBar({permissionsGranted})
 {
     const [menuButton, setMenuButton] = useState(false);
+    const [admin, setAdmin] = useState(false);
 
     const handleMenuToggle = () => {
         setMenuButton(!menuButton)
@@ -33,8 +34,8 @@ function NavBar()
                         
                 <ul className="menu-items-content">
                     <li><Link to={"/notfound"}>Nosotros</Link></li>
-                    <li><Link to={"/Admin"}>Admin</Link></li>
-                    <li><Link to={"/notfound"}>Inicio de sesion</Link></li>
+                    <li><Link to={`${permissionsGranted == 'success' ? '/Admin' : '/notAuthorized'}`}>Admin</Link></li>
+                    <li><Link to={"/LogIn"}>Inicio de sesion</Link></li>
                 </ul>
             </section>
         </main>

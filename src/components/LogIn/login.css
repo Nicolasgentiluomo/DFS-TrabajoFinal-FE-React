@@ -1,24 +1,24 @@
 
-.admin{
+.main-login{
     display: flex;
     justify-content: center;
     background-color: #1E1F20;
 }
 
-.formContainer{
+.formContainerLogin{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding:30px 0px 0px 0px;
     width: 100%;
 }
-.formContainer h1{
+.formContainerLogin h1{
     color: #D3D6D8;
     font-family: 'Golos Text';
     font-size: 1.5rem;
 }
 
-.formAdmin{
+.formLogin{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -26,12 +26,23 @@
     max-width: 300px;
     width: 80%;
 }
-.formAdmin label{
+
+.formLogin p{
+    display: none;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+
+.formLogin p.show{
+    display: flex;
+}
+.formLogin label{
     color: #D3D6D8;
     font-family: 'Golos Text';
     font-size: 1.25rem;
 }
-.formAdmin input{
+.formLogin input{
     margin-bottom: 20px;
     font-family: 'Golos Text';
     border-radius: 5px;
@@ -39,7 +50,7 @@
     width: 100%;
 }
 
-.formAdmin button{
+.formLogin button{
     align-self: center;
     margin-bottom: 20px;
     font-family: 'Golos Text';
