@@ -34,7 +34,7 @@ function NavBar({permissionsGranted})
                         
                 <ul className="menu-items-content">
                     <li><Link to={"/notfound"}>Nosotros</Link></li>
-                    <li><Link to={`${permissionsGranted == 'success' ? '/Admin' : '/notAuthorized'}`}>Admin</Link></li>
+                    <li><Link to={`${permissionsGranted == 'success' ? "/Admin" : "/notAuthorized"}`}>Admin</Link></li>
                     <li><Link to={"/LogIn"}>Inicio de sesion</Link></li>
                 </ul>
             </section>

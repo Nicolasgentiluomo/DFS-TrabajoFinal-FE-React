@@ -28,7 +28,7 @@ function LogIn({permissionsGranted,setPermissionsGranted}){
         e.preventDefault();
         if (credentialsInput.userName == credentials.UserName && credentialsInput.password == credentials.Password) {
             setPermissionsGranted('success');
-            // navigate('/')
+            navigate('/')
         }
         else{
             setPermissionsGranted('incorrect')

@@ -18,7 +18,7 @@ function App() {
   return (
     <BrowserRouter>
 
-      <NavBar permissinosGranted={permissionsGranted}/>
+      <NavBar permissionsGranted={permissionsGranted}/>
 
       <Routes>
         <Route path='/' element={<Home/>}/>
