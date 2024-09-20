@@ -1,6 +1,16 @@
 import './admin.css';
+import { useNavigate } from 'react-router-dom';
+import React, {useEffect} from 'react';
 
-function Admin(){
+function Admin(permissionsGranted){
+    const navigate = useNavigate();
+
+    useEffect(() => {     
+        if(permissionsGranted != 'success'){
+            navigate('/notAuthorized');
+        }
+    });
+
     return(
         <div className="admin">
             <section className="formContainer">
