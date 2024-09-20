@@ -1,4 +1,4 @@
-import './login.css'
+import css from './login.module.css'
 import React, {useState,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -36,16 +36,16 @@ function LogIn({permissionsGranted,setPermissionsGranted}){
     }
 
     return(
-        <div className="main-login">
-            <section className="formContainerLogin">
+        <div className={css.mainLogin}>
+            <section className={css.formContainerLogin}>
                 <h1>Iniciar sesion</h1>
-                <form className="formLogin" onSubmit={validation}>
+                <form className={css.formLogin} onSubmit={validation}>
                     <label htmlFor="userName">Usuario:</label>
                     <input type="text" name="userName" id="userName" placeholder="Ingrese el usuario" value={credentialsInput.userName} onChange={handleChange}/>
 
                     <label htmlFor="password">Contraseña:</label>
                     <input type="password" name="password" id="password" placeholder="Ingrese la contraseña" value={credentialsInput.password} onChange={handleChange}/>
-                    <p className={`${permissionsGranted == 'incorrect' ? 'show' : ''}`}>Datos ingresados incorrectos</p>
+                    <p className={`${permissionsGranted == css.incorrect ? css.show : ''}`}>Datos ingresados incorrectos</p>
 
                     <button type='submit'>Iniciar sesion</button>
                 </form>

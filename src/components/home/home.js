@@ -2,15 +2,15 @@ import { Link } from 'react-router-dom';
 import Producto from '../../assets/Producto2.png';
 import Textura from '../../assets/Textura1.png';
 import Trabajo from '../../assets/Trabajando.png';
-import './home.css'
+import css from './home.module.css'
 
 
 function Home(){
     return (
-        <section className="main-section">
+        <section className={css.mainSection}>
 
-            <Link to={"/notfound"} className="boxContainer1">
-                <div className="text1">
+            <Link to={"/notfound"} className={css.boxContainer1}>
+                <div className={css.text1}>
                     <h1>Nosotros</h1>
                     <p>
                         Somos un emprendimiento que basa sus servicios y productos
@@ -21,8 +21,8 @@ function Home(){
                 <img href="hola" src={Trabajo} alt=""/>
             </Link>
 
-            <Link to={"/notfound"} className="boxContainer2">
-                <div className="text2">
+            <Link to={"/notfound"} className={css.boxContainer2}>
+                <div className={css.text2}>
                     <h1>Texturas</h1>
                     <p>Realizamos diferentes tipos de texturas tanto al hierro
                         como a la madera. Podes elegir la textura que mas te guste!
@@ -32,9 +32,9 @@ function Home(){
                 <img src={Textura} alt=""/>
             </Link>   
 
-            <Link to={"/Products"} className="boxContainer1">
+            <Link to={"/Products"} className={css.boxContainer1}>
                 
-                    <div className="text1">
+                    <div className={css.text1}>
                         <h1>Productos</h1>
                         <p>Queres ver algunos de los productos que tenemos a la venta?</p>
                         <p>Hace click para poder verlos, y si te gustan, comprarlos!</p>

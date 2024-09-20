@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import './products.css'
+import css from './products.module.css'
 
 
 function Products(){
@@ -15,30 +15,34 @@ function Products(){
         .catch((error) => console.error('Error al cargar datos:', error));
     }, []);
 
-   function filterByCategory(filter){
+    function filterByCategory(filter){
         setCategory(filter);
-   }
+    }
 
-   function showCategories(){
-    setCategoryButton(!categoryButton);
-   }
+    function showCategories(){
+        setCategoryButton(!categoryButton);
+    }
+
+    if (!products) {
+        return <div className={css.main}>Loading...</div>;
+    }
 
     return (
-        <section className = "main">
+        <section className = {css.main}>
             <button onClick={showCategories}>Categorias</button>
-            <div className={`category-items ${categoryButton ? 'show':''}`}>
+            <div className={`${css.categoryItems} ${categoryButton ? css.show:''}`}>
                 <ul>
-                    <li className="category-item" onClick={() => {filterByCategory('Todo'); showCategories()}}>Todo</li>
-                    <li className="category-item" onClick={() => {filterByCategory('Mesas'); showCategories()}}>Mesas</li>
-                    <li className="category-item" onClick={() => {filterByCategory('Sillas'); showCategories()}}>Sillas</li>
-                    <li className="category-item" onClick={() => {filterByCategory('Lamparas'); showCategories()}}>Lamparas</li>
+                    <li className={css.categoryItem} onClick={() => {filterByCategory('Todo'); showCategories()}}>Todo</li>
+                    <li className={css.categoryItem} onClick={() => {filterByCategory('Mesas'); showCategories()}}>Mesas</li>
+                    <li className={css.categoryItem} onClick={() => {filterByCategory('Sillas'); showCategories()}}>Sillas</li>
+                    <li className={css.categoryItem} onClick={() => {filterByCategory('Lamparas'); showCategories()}}>Lamparas</li>
                 </ul>
             </div>
-            <section className="products">
+            <section className={css.products}>
                 {products.map((product) => (
-                    <Link to={`/productDetails/${product.Id}`} className={`productContainer ${product.Category == category || category == "Todo" ? '': 'hide'}`} key={product.Id}>
+                    <Link to={`/productDetails/${product.Id}`} className={`${css.productContainer} ${product.Category == category || category == "Todo" ? '': css.hide}`} key={product.Id}>
                         <img src={`./img/Producto${product.ImgId}.jpeg`} alt=''/>
-                        <div className='productsText'>
+                        <div className={css.productsText}>
                             <h1>{product.Title}</h1>
                             <p>{product.Price}</p>
                             <p>{product.Description}</p>

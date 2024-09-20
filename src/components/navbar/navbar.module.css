@@ -32,7 +32,7 @@ header{
     background-color: #1E1F20;
 }
 
-.menu-icon{
+.menuIcon{
     padding-right: 20px;
     font-size: 25px;
     align-self: flex-end;
@@ -40,7 +40,7 @@ header{
     color: white;
 }
 
-.menu-items{
+.menuItems{
     display: flex;
     background-color: #8C8068;
     justify-content: space-around;
@@ -52,11 +52,11 @@ header{
     overflow: hidden;  
 }
 
-.menu-items.show{
+.menuItems.show{
     height: 75px;
 }
 
-.menu-items-content {
+.menuItemsContent {
     display: flex;
     flex-direction: column;
     list-style-type: none;
@@ -64,7 +64,7 @@ header{
     margin: 0;
 }
 
-.menu-items-content a{
+.menuItemsContent a{
     text-decoration: none;
     color: black;
     font-size: large;
@@ -75,7 +75,7 @@ header{
     transition: background-color 0.5s ease;
 }
 
-.menu-items-content a:hover{
+.menuItemsContent a:hover{
     background-color: #D3D6D8;
 }
 
@@ -86,13 +86,13 @@ header{
     .navbar p{
         display: flex;
     }
-    .menu-icon{
+    .menuIcon{
         display: none;
     }
-    .menu-items{
+    .menuItems{
         height: 30px;
     }
-    .menu-items-content{
+    .menuItemsContent{
         flex-direction: row;
         justify-content: space-around;
         width: 50%;

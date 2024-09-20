@@ -1,5 +1,5 @@
 
-.main-section{
+.mainSection{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -132,7 +132,7 @@
 /* Responsive */
 @media (min-width: 550px) {
     /* Main section */
-    .main-section{
+    .mainSection{
         padding: 40px 0 40px 0;
     }
     .boxContainer1 {
@@ -166,7 +166,7 @@
 
 @media (min-width: 700px) {
     /* Main section */
-    .main-section{
+    .mainSection{
         padding: 40px 0 40px 0;
     }
     .boxContainer1 {

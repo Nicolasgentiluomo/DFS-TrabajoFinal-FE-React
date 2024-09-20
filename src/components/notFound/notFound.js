@@ -1,8 +1,8 @@
-import './notFound.css'
+import css from './notFound.module.css'
 
 function NotFound(){
     return(
-        <p className="notFoundClass">Esta seccion aun no se hizo</p>
+        <p className={css.notFoundClass}>Esta seccion aun no se hizo</p>
     )
 }
 

@@ -1,6 +1,7 @@
 
 .main{
     background-color: #1E1F20;
+    /* min-height: 300px; */
 }
 
 button{
@@ -15,7 +16,7 @@ button{
     width: 180px;
 }
 
-.category-items{
+.categoryItems{
     color: rgb(211, 214, 216);
     font-family: 'Golos Text';
     font-size: 20px;
@@ -23,18 +24,18 @@ button{
     overflow: hidden;
     transition: height 0.5s ease;
 }
-.category-items ul{
+.categoryItems ul{
     margin: 5px 0 0 0;
     padding: 0 0 0 60px;
     width: 110px;
 }
 
-.category-items li:hover{
+.categoryItems li:hover{
     cursor: pointer;
     color: #8C8068;
 }
 
-.category-items.show{
+.categoryItems.show{
     height: 120px;
 }
 

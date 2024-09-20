@@ -1,9 +1,9 @@
-import './footer.css';
+import css from './footer.module.css';
 
 function Footer(){
     return (
-        <footer className="footer">
-        <div className="footer-content">
+        <footer className={css.footer}>
+        <div className={css.footerContent}>
             <h3>Contacto</h3>
             <p><i className="fas fa-envelope"></i> contacto@gmail.com</p>
             <p><i className="fas fa-phone"></i> +54 123 456 789</p>
@@ -11,15 +11,15 @@ function Footer(){
                 <i className="fa-brands fa-whatsapp"></i> Haceme tu pregunta!</a>
         </div>
 
-        <div className="footer-content">
+        <div className={css.footerContent}>
             <h3>Síguenos</h3>
-            <div className="social-icons">
-                <a href="#" className="icon-link"><i className="fab fa-facebook-f"></i></a>
-                <a href="#" className="icon-link"><i className="fab fa-instagram"></i></a>
+            <div className={css.socialIcons}>
+                <a href="#" className={css.iconLink}><i className="fab fa-facebook-f"></i></a>
+                <a href="#" className={css.iconLink}><i className="fab fa-instagram"></i></a>
             </div>
         </div>
             
-        <div className="footer-content">
+        <div className={css.footerContent}>
             <p>Copyright &copy; 2024, Todos los derechos reservados</p>
         </div>
     </footer>

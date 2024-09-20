@@ -1,8 +1,8 @@
-import './admin.css';
+import css from './admin.module.css';
 import { useNavigate } from 'react-router-dom';
 import React, {useEffect} from 'react';
 
-function Admin(permissionsGranted){
+function Admin({permissionsGranted}){
     const navigate = useNavigate();
 
     useEffect(() => {     
@@ -12,10 +12,10 @@ function Admin(permissionsGranted){
     });
 
     return(
-        <div className="admin">
-            <section className="formContainer">
+        <div className={css.admin}>
+            <section className={css.formContainer}>
                 <h1>Agregar nuevo producto</h1>
-                <form className="formAdmin">
+                <form className={css.formAdmin}>
                     <label for="name">Nombre:</label>
                     <input type="text" name="name" id="name" placeholder="Nombre del producto"/>
 
