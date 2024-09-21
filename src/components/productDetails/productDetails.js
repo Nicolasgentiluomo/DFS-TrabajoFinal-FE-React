@@ -8,6 +8,11 @@ function ProductDetails(){
     const [products, setProducts] = useState([]);
     const [filteredProduct, setFilteredProduct] = useState()
 
+    let Currency = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
+
     useEffect(() => {     
         fetch('../Products.json')
         .then((response) => response.json())
@@ -36,9 +41,10 @@ function ProductDetails(){
                     <img src={`../img/Producto${filteredProduct.ImgId}.jpeg`} alt=''/>
                     <div className={css.productsText}>
                         <h1>{filteredProduct.Title}</h1>
-                        <p>{filteredProduct.Price}</p>
-                        <p>{filteredProduct.Description}</p>
+                        <p>Precio: {Currency.format(filteredProduct.Price)}</p>
+                        <p>{filteredProduct.LargeDescription}</p>
                     </div>
+                    <button>Comprar</button>
                 </div>
             </div>
         </section>
