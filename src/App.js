@@ -27,7 +27,7 @@ function App() {
         <Route path='/Products' element={ <Products/>}/>
         <Route path='/Admin' element={ <Admin permissionsGranted={permissionsGranted}/>}/>
         <Route path='/notfound' element={ <NotFound/>}/>
-        <Route path='/notAuthorized' element={ <NotAuthorized/>}/>
+        <Route path='/notAuthorized' element={ <NotAuthorized permissionsGranted={permissionsGranted}/>}/>
         <Route path='/productDetails/:id' element={<ProductDetails/>}/>
       </Routes>
 

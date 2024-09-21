@@ -75,7 +75,7 @@
 }
 
 
-button{
+.productContainer button{
     order: 3;
     display: flex;
     align-self: center;
@@ -92,7 +92,7 @@ button{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover {
+.productContainer button:hover {
     transform: translateY(-3px);
     box-shadow:3px 3px 10px rgba(0, 0, 0, 0.523);
 }

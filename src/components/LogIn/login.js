@@ -45,7 +45,7 @@ function LogIn({permissionsGranted,setPermissionsGranted}){
 
                     <label htmlFor="password">Contraseña:</label>
                     <input type="password" name="password" id="password" placeholder="Ingrese la contraseña" value={credentialsInput.password} onChange={handleChange}/>
-                    <p className={`${permissionsGranted == css.incorrect ? css.show : ''}`}>Datos ingresados incorrectos</p>
+                    <p className={`${permissionsGranted == 'incorrect' ? css.show : ''}`}>Datos ingresados incorrectos</p>
 
                     <button type='submit'>Iniciar sesion</button>
                 </form>

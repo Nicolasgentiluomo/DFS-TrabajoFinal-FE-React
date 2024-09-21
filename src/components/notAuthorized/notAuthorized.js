@@ -1,8 +1,11 @@
 import css from './notAuthorized.module.css'
 
-function NotAuthorized(){
+function NotAuthorized({permissionsGranted}){
+    console.log(permissionsGranted)
     return(
-        <p className={css.notAuthorizedClass}>No tenes acceso a esta seccion</p>
+        <div>
+            <p className={css.notAuthorizedClass}>No tenes acceso a esta seccion</p>
+        </div>
     )
 }
 
